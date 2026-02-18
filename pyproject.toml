@@ -14,20 +14,18 @@ packages = [
 ]
 readme = "README.md"
 repository = "https://github.com/pfun-health/fastapi-admin.git"
-version = "1.0.6"
-
-[dependencies]
-Babel = "*"
-aiofiles = "*"
-redis = "*"
-bcrypt = "*"
-fastapi = "*"
-jinja2 = "*"
-python = "^3.10"
-python-multipart = "*"
-tortoise-orm = "*"
-uvicorn = { version = "*", extras = ["standard"] }
-pendulum = "*"
+version = "1.0.7"
+dependencies = [
+    "aiofiles>=25.1.0",
+    "babel>=2.18.0",
+    "bcrypt>=5.0.0",
+    "fastapi[standard]>=0.129.0",
+    "jinja2>=3.1.6",
+    "pendulum>=3.2.0",
+    "python-multipart>=0.0.22",
+    "redis>=7.2.0",
+    "tortoise-orm>=1.1.4",
+]
 
 [build-system]
 requires = ["hatchling", "wheel", "setuptools"]
@@ -50,4 +48,6 @@ dev = [
     "asyncpg",
     "python-dotenv",
     "mypy",
+    "uvicorn>=0.41.0",
+    "ipython>=9.10.0",
 ]

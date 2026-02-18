@@ -5,7 +5,7 @@ from jinja2 import TemplateNotFound
 from starlette.requests import Request
 from starlette.responses import RedirectResponse
 from starlette.status import HTTP_303_SEE_OTHER
-from tortoise import Model
+from tortoise.models import Model
 from tortoise.fields import ManyToManyRelation
 from tortoise.transactions import in_transaction
 

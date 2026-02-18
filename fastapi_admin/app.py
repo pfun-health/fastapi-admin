@@ -4,7 +4,7 @@ import redis.asyncio as redis
 from fastapi import FastAPI
 from pydantic import HttpUrl
 from starlette.middleware.base import BaseHTTPMiddleware
-from tortoise import Model
+from tortoise.models import Model
 
 from fastapi_admin import i18n
 

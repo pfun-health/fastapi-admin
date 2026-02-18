@@ -4,7 +4,7 @@ from typing import Any, List, Optional, Tuple, Type
 
 import pendulum
 from starlette.requests import Request
-from tortoise import Model
+from tortoise.models import Model
 from tortoise.queryset import QuerySet
 
 from fastapi_admin import constants

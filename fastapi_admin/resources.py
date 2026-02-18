@@ -4,7 +4,7 @@ from pydantic import BaseModel, validator
 from starlette.datastructures import FormData
 from starlette.requests import Request
 from tortoise import ForeignKeyFieldInstance, ManyToManyFieldInstance
-from tortoise import Model as TortoiseModel
+from tortoise.models import Model as TortoiseModel
 from tortoise.fields import BooleanField, DateField, DatetimeField, JSONField
 from tortoise.fields.data import CharEnumFieldInstance, IntEnumFieldInstance, IntField, TextField
 from tortoise.queryset import QuerySet

@@ -5,7 +5,7 @@ from typing import Any, List, Optional, Tuple, Type
 
 from starlette.datastructures import UploadFile
 from starlette.requests import Request
-from tortoise import Model
+from tortoise.models import Model
 
 from fastapi_admin.file_upload import FileUpload
 from fastapi_admin.widgets import Widget

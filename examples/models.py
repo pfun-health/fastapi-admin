@@ -1,6 +1,7 @@
 import datetime
 
-from tortoise import Model, fields
+from tortoise import fields
+from tortoise.models import Model
 
 from examples.enums import ProductType, Status
 from fastapi_admin.models import AbstractAdmin

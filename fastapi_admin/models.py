@@ -1,4 +1,5 @@
-from tortoise import Model, fields
+from tortoise.models import Model
+from tortoise import fields
 
 
 class AbstractAdmin(Model):
