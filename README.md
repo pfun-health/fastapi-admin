@@ -18,7 +18,7 @@ inspired by Django admin.
 ## Installation
 
 ```shell
-> pip install fastapi-admin
+$ pip install fastapi-admin
 ```
 
 ## Requirements
