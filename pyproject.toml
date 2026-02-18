@@ -1,8 +1,11 @@
-[tool.poetry]
-authors = ["long2ice <long2ice@gmail.com>"]
+[project]
+authors = [
+	{ name = "long2ice", email = "long2ice@gmail.com" },
+	{ name = "Robbie Capps", email = "robbie@pfun.me" }
+]
 description = "A fast admin dashboard based on FastAPI and TortoiseORM with tabler ui, inspired by Django admin."
 documentation = "https://fastapi-admin.github.io"
-homepage = "https://github.com/fastapi-admin/fastapi-admin"
+homepage = "https://github.com/pfun-health/fastapi-admin"
 keywords = ["fastapi", "admin", "dashboard", "tortoise-orm"]
 license = "Apache-2.0"
 name = "fastapi-admin"
@@ -10,39 +13,41 @@ packages = [
     { include = "fastapi_admin" },
 ]
 readme = "README.md"
-repository = "https://github.com/fastapi-admin/fastapi-admin.git"
+repository = "https://github.com/pfun-health/fastapi-admin.git"
 version = "1.0.5"
 
-[tool.poetry.dependencies]
+[dependencies]
 Babel = "*"
 aiofiles = "*"
 redis = "*"
 bcrypt = "*"
 fastapi = "*"
 jinja2 = "*"
-python = "^3.8"
+python = "^3.10"
 python-multipart = "*"
 tortoise-orm = "*"
 uvicorn = { version = "*", extras = ["standard"] }
 pendulum = "*"
 
-[tool.poetry.group.dev.dependencies]
-# test
-pytest = "*"
-pytest-asyncio = "*"
-pytest-mock = "*"
-pytest-xdist = "*"
-# lint
-black = "*"
-flake8 = "*"
-isort = "*"
-pylint = "*"
-# example
-asyncmy = "*"
-asyncpg = "*"
-python-dotenv = "*"
-mypy = "*"
-
 [build-system]
-build-backend = "poetry.core.masonry.api"
-requires = ["poetry-core>=1.0.0", "setuptools"]
+requires = ["hatchling", "wheel", "setuptools"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    # test
+    "pytest",
+    "pytest-asyncio",
+    "pytest-mock",
+    "pytest-xdist",
+    # lint
+    "black",
+    "flake8",
+    "isort",
+    "pylint",
+    # example
+    "asyncmy",
+    "asyncpg",
+    "python-dotenv",
+    "mypy",
+]
